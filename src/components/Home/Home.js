@@ -1,5 +1,6 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import drums from "./drums.jfif";
 
 const Home = () => {
   return (
@@ -12,9 +13,15 @@ const Home = () => {
       </div> */}
       <Container>
         <Row>
-          <Col>Welcome to drum world</Col>
           <Col>
-            <img src="" alt="" srcset="" />
+            <h1>Welcome to drum world</h1>
+            <p>
+              Find all kinds of drums and instument here all at once. We provide
+              the best drums to to enrich your music.
+            </p>
+          </Col>
+          <Col>
+            <img src={drums} alt="" />
           </Col>
         </Row>
       </Container>
