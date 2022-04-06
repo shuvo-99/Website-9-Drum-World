@@ -1,8 +1,8 @@
 import React from "react";
+import "./CardGroup.css";
+import { LineChart, Line, CartesianGrid, XAxis, YAxis } from "recharts";
 
-import linech
-
-const Dashboard = (props) => {
+const CardGroup = (props) => {
   const { graphdata } = props;
   const { month, investment, sell, revenue } = graphdata;
   return (
@@ -20,4 +20,4 @@ const Dashboard = (props) => {
   );
 };
 
-export default Dashboard;
+export default CardGroup;
