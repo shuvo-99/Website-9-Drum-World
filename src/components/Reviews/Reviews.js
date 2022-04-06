@@ -1,9 +1,15 @@
 import React from "react";
+import CardGroup from "../CardGroup/CardGroup";
+import reviewInfo from "../hooks/reviewInfo";
+import "./Reviews.css";
 
 const Review = () => {
+  const [reviewdatas, setreviewdata] = reviewInfo();
   return (
-    <div>
-      <h1>This is review</h1>
+    <div className="reviewContainer">
+      {reviewdatas.map((reviewdata) => (
+        <CardGroup key={reviewdata.id} reviewdata={reviewdata}></CardGroup>
+      ))}
     </div>
   );
 };
