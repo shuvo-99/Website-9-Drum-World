@@ -1,8 +1,14 @@
 import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Button, Col, Container, Row } from "react-bootstrap";
 import drums from "./drums.jfif";
+import CardGroup from "../CardGroup/CardGroup";
+import homereviewInfo from "../hooks/homereviewInfo";
+import "./Home.css";
+import { Link } from "react-router-dom";
 
 const Home = () => {
+  const [reviewdatas, setreviewdata] = homereviewInfo();
+
   return (
     <div>
       {/* <div className="Container">
@@ -25,6 +31,25 @@ const Home = () => {
           </Col>
         </Row>
       </Container>
+      <br />
+      <br />
+      <h1>Customer Reviews</h1>
+      <br />
+      <div className="homereviewContainer">
+        {reviewdatas.map((reviewdata) => (
+          // console.log(reviewdata)
+          <CardGroup key={reviewdata.id} reviewdata={reviewdata}></CardGroup>
+        ))}
+      </div>
+      <br />
+      <div>
+        <nav>
+          <Link to="/Review">
+            <Button variant="danger">See All Reviews</Button>
+          </Link>
+        </nav>
+      </div>
+      <br />
     </div>
   );
 };

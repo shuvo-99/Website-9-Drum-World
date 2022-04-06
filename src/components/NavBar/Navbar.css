@@ -6,3 +6,7 @@ nav a {
 nav a:hover {
   color: red;
 }
+
+.navBar-container {
+  margin: 50px;
+}

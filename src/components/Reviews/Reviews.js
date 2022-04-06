@@ -8,6 +8,7 @@ const Review = () => {
   return (
     <div className="reviewContainer">
       {reviewdatas.map((reviewdata) => (
+        // console.log(reviewdata)
         <CardGroup key={reviewdata.id} reviewdata={reviewdata}></CardGroup>
       ))}
     </div>
