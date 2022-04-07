@@ -1,22 +1,24 @@
 import React from "react";
+// import { LineChart, Line, CartesianGrid, XAxis, YAxis } from "recharts";
+// import GraphInfo from "../hooks/graphinfo";
+import CardGroup from "../Graph/myLineChart";
+import graphInfo from "../hooks/graphinfo";
+import App from "../Graph/barChart";
+import "./dashboard.css";
 
-import linech
-
-const Dashboard = (props) => {
-  const { graphdata } = props;
-  const { month, investment, sell, revenue } = graphdata;
+const Dashboard = () => {
+  // const { graphdata } = props;
+  // const { month, investment, sell, revenue } = graphdata;
+  const [graphdatas, setreviewdata] = graphInfo();
   return (
-    <LineChart
-      width={600}
-      height={300}
-      data={data}
-      margin={{ top: 5, right: 20, bottom: 5, left: 0 }}
-    >
-      <Line type="monotone" dataKey="uv" stroke="#8884d8" />
-      <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
-      <XAxis dataKey="month" />
-      <YAxis />
-    </LineChart>
+    <div className="graph">
+      {/* {graphdatas.map((graphdata) => (
+        // console.log(reviewdata)
+        <CardGroup graphdata={graphdata}></CardGroup>
+      ))} */}
+      <CardGroup></CardGroup>
+      <App></App>
+    </div>
   );
 };
 
